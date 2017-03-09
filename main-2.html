@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<title>Second mainn</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container"> 
+		<div  ng-controller="myController">
+			<label>What is your fb Id?</label>
+			<input type="text" name="id" ng-model="handle">
+			<hr>
+			<div>
+			<h1>facebook.com/{{ lowercasehan() }}</h1>
+			</div>
+			<input type="text" name="ab" id="inp">
+		</div>
+
+	</div>
+</body>
+<script src="https://code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
+<!-- <script src="https://code.angularjs.org/1.3.0-rc.1/angular-messages.min.js"></script>
+<script src="https://code.angularjs.org/1.3.0-rc.1/angular-resource.min.js"></script> -->
+<script src="com_directives.js"></script>
+<script scr="index_2.js"></script>
+</html>
