@@ -1,5 +1,5 @@
 var app = angular.module('my', ['ngMessages','ngResource','ngRoute']);
-
+// ed sharee shape of you
 
 app.config(function($routeProvider){
 	console.log("cinfig init");
@@ -49,105 +49,31 @@ app.service('meriService', function () {
 //
 // })
 
+app.directive('searchResult', function () {
+	return{
+		restrict:'AE',
+		template : "<a href='#' class='list-group-item'>"+
+        "<h4 class='list-group-item-heading'>Job title</h4>" +
+        "<p class='list-group-item-text'>internee in Codenvio</p>"+
+        "</a>",
+
+		replace:true
+	}
+});
 
 
 app.controller("myController", function($scope, $log, $filter,$resource, meriService){
-	$log.name="afzal";
-	$scope.name = meriService.name;
-		$log.log(meriService.name);
-	$log.log(meriService.nameLength());
 
-
-    $scope.$watch('name', function () {
-        meriService.name = $scope.name;
-    });
-
-
-	console.log($scope);
-	$scope.handle = "";
-
-	$scope.characters = 5;
-
-	$scope.rulenames = [
-	{rulename : "This is rule number 1"},
-	{rulename : "This is rule number 2"},
-	{rulename : "This is rule number 3"}
-	];
-
-
-	$scope.$watch("handle",  function(oldValue,newValue){
-		$log.info("Changed!");
-		$log.log("oldValue : " +oldValue);
-		$log.log("newValue : "+newValue);
-	});
-
-	$scope.alertFunction = function(){
-		alert("You clicke me");
-	};
 
 });
 
 
 app.controller("myController2", function($scope, $log, $filter,$resource, $routeParams, meriService){
-	$log.name="Shahnawaz";
-	$scope.name = meriService.name;
-
-
-    $scope.$watch('name', function () {
-         meriService.name = $scope.name;
-	});
-
-	$scope.num = $routeParams.num || 2;
-
-	console.log($scope);
-	$scope.handle = "";
-
-	$scope.characters = 5;
-
-	$scope.rulenames = [
-	{rulename : "This is rule number 1"},
-	{rulename : "This is rule number 2"},
-	{rulename : "This is rule number 3"}
-	];
-
-
-	$scope.$watch("handle",  function(oldValue,newValue){
-		$log.info("Changed!");
-		$log.log("oldValue : " +oldValue);
-		$log.log("newValue : "+newValue);
-	});
-
-	$scope.alertFunction = function(){
-		alert("You clicke me");
-	};
 
 });
 
 app.controller("myController3", function($scope, $log, $filter,$resource, $routeParams){
 
-    $scope.num = $routeParams.num || 2;
-
-    console.log($scope);
-    $scope.handle = "";
-
-    $scope.characters = 5;
-
-    $scope.rulenames = [
-        {rulename : "This is rule number 1"},
-        {rulename : "This is rule number 2"},
-        {rulename : "This is rule number 3"}
-    ];
-
-
-    $scope.$watch("handle",  function(oldValue,newValue){
-        $log.info("Changed!");
-        $log.log("oldValue : " +oldValue);
-        $log.log("newValue : "+newValue);
-    });
-
-    $scope.alertFunction = function(){
-        alert("You clicke me");
-    };
 
 });
 
